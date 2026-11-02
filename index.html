@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0f14">
+  <meta name="color-scheme" content="dark">
+
+  <!-- SEO -->
+  <title>HaxorAI Assistant - AI untuk Coding, Software Development & Cybersecurity</title>
+  <meta name="description" content="HaxorAI Assistant adalah asisten AI untuk pemrograman, coding, pengembangan perangkat lunak, analisis sistem, debugging, dan keamanan siber.">
+  <meta name="keywords" content="HaxorAI, HaxorAI Assistant, AI Assistant, AI coding assistant, AI untuk programmer, pemrograman AI, software development, web development, debugging, cybersecurity, artificial intelligence">
+  <meta name="author" content="Samuel Pasaribu">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://chat.haxorai.com/">
+
+  <!-- Open Graph: WhatsApp, Facebook, LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HaxorAI">
+  <meta property="og:title" content="HaxorAI Assistant - AI for Ideas, Systems, and Code">
+  <meta property="og:description" content="Jelajahi HaxorAI Assistant, asisten kecerdasan buatan untuk coding, software engineering, pengembangan web, analisis sistem, dan keamanan siber.">
+  <meta property="og:url" content="https://chat.haxorai.com/">
+  <meta property="og:image" content="https://chat.haxorai.com/thumbnail.png">
+  <meta property="og:image:secure_url" content="https://chat.haxorai.com/thumbnail.png">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HaxorAI Assistant - AI workspace for programming and technology">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HaxorAI Assistant - AI for Ideas, Systems, and Code">
+  <meta name="twitter:description" content="Asisten AI untuk pemrograman, software development, debugging, analisis sistem, dan cybersecurity.">
+  <meta name="twitter:image" content="https://chat.haxorai.com/thumbnail.png">
+  <meta name="twitter:image:alt" content="HaxorAI Assistant">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://web.haxorai.com/favicon.ico">
+  <link rel="apple-touch-icon" href="https://web.haxorai.com/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-tomorrow.min.css">
+
+  <!-- Markdown -->
+  <script defer src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+
+  <!-- Syntax Highlighting -->
+  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-markup.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-css.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-javascript.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-json.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-python.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-bash.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-yaml.min.js"></script>
+
+  <!-- Supabase Authentication -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Application -->
+  <script defer src="js/app.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" defer></script>
+</head>
+
+<body>
+  <div class="app">
+
+    <aside class="sidebar" id="sidebar" aria-label="Navigasi utama">
+      <div class="brand">
+        <div class="brand-mark">
+          <i class="icon i-logo"></i>
+        </div>
+        <div>
+          <div class="brand-name">HaxorAI</div>
+          <div class="brand-sub">Artificial Intelligence</div>
+        </div>
+      </div>
+
+      <button class="new-chat" id="newChat" type="button">
+        <i class="icon i-plus"></i>
+        Percakapan baru
+      </button>
+
+      <section>
+        <p class="section-label">Workspace</p>
+        <nav class="nav-list">
+          <button class="nav-item active" type="button" aria-current="page">
+            <i class="icon i-message"></i>
+            AI Assistant
+          </button>
+        </nav>
+      </section>
+
+      <div class="sidebar-bottom">
+        <div class="status-line">
+          <span class="status-dot"></span>
+          AI workspace
+        </div>
+        <p class="sidebar-note">
+          Ruang berpikir dan membangun. Dari gagasan, analisis, hingga implementasi.
+        </p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu" id="menuToggle" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="sidebar">
+            <i class="icon i-menu"></i>
+          </button>
+
+          <div>
+            <h2 class="page-title">AI Assistant</h2>
+            <p class="page-subtitle">
+              Intelligence for ideas, systems, and code
+            </p>
+          </div>
+        </div>
+
+<div class="auth-area">
+  <button type="button" class="login-trigger" id="loginButton" aria-haspopup="dialog" aria-controls="loginModal">
+    <span class="auth-icon" aria-hidden="true"></span>
+    <span id="loginButtonLabel">Login</span>
+  </button>
+</div>
+      </header>
+
+      <section class="content">
+        <section id="chatView">
+          <div class="welcome" id="welcome">
+<main id="container">
+        <div id="bot" class="neutral">
+            <div id="head">
+                <div id="left-ear">
+                    <div id="left-ear-inner"></div>
+                </div>
+                <div id="face">
+                    <div id="eyes">
+                        <div id="left-eye"></div>
+                        <div id="right-eye"></div>
+                    </div>
+                    <div id="mouth"></div>
+                </div>
+                <div id="right-ear">
+                    <div id="right-ear-inner"></div>
+                </div>
+            </div>
+        </div>
+<ul id="switches">
+  <li>
+    <button type="button" id="speakIntro" class="voice-button" disabled aria-busy="true">
+      <span class="voice-spinner" aria-hidden="true"></span>
+      <span class="voice-button-label">Memuat suara...</span>
+    </button>
+  </li>
+</ul>
+    </main>
+          </div>
+
+          <div class="chat" id="chat" aria-live="polite" aria-relevant="additions"></div>
+        </section>
+      </section>
+
+      <footer class="composer-wrap" id="composerWrap">
+        <form class="composer" id="chatForm">
+          <textarea
+            id="messageInput"
+            rows="1"
+            maxlength="6000"
+            placeholder="Tanyakan sesuatu kepada HaxorAI..."
+            aria-label="Pesan untuk HaxorAI Assistant"
+            required
+          ></textarea>
+
+          <div class="composer-footer">
+            <span class="composer-hint">
+              Enter untuk mengirim · Shift + Enter untuk baris baru
+            </span>
+
+            <button class="send-button" id="sendButton" type="submit">
+              <span class="send-label">Kirim</span>
+              <i class="icon i-send"></i>
+            </button>
+          </div>
+        </form>
+
+        <p class="disclaimer">
+          © <span id="copyright-year"></span>
+          <a
+            href="https://www.haxorai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >haxorai.com</a>.
+          All rights reserved.
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  
+<div class="login-overlay hidden" id="loginModal">
+  <section class="login-dialog" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <button type="button" class="login-close" id="closeLogin" aria-label="Tutup login"></button>
+
+<div class="login-header">
+  <div class="login-icon" aria-hidden="true"></div>
+
+  <h2 id="loginTitle">Admin Authentication</h2>
+
+  <p class="login-description">
+    Masuk untuk mengakses HaxorAI Assistant.
+  </p>
+</div>
+
+    <form id="loginForm">
+      <label for="adminEmail">Email</label>
+      <input
+        type="email"
+        id="adminEmail"
+        name="email"
+        autocomplete="username"
+        placeholder="admin@example.com"
+        maxlength="254"
+        required
+      >
+
+<label for="adminPassword">Password</label>
+
+<div class="password-wrapper">
+  <input
+    type="password"
+    id="adminPassword"
+    name="password"
+    autocomplete="current-password"
+    placeholder="Masukkan password"
+    required
+  >
+
+  <button
+    type="button"
+    class="password-toggle"
+    id="passwordToggle"
+    aria-label="Tampilkan password"
+    aria-pressed="false"
+    hidden
+  ></button>
+</div>
+
+      <p class="login-error hidden" id="loginError" role="alert"></p>
+
+      <button
+        type="submit"
+        class="login-submit"
+        id="loginSubmit"
+      >
+        <span>Masuk sebagai Admin</span>
+      </button>
+    </form>
+
+    <p class="login-security">
+      <i class="icon i-logo"></i>
+      Protected Admin Access
+    </p>
+  </section>
+</div>
+
+  <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
