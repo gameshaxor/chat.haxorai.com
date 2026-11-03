@@ -61,7 +61,6 @@
 
   <!-- Supabase Authentication -->
   <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" defer></script>
 </head>
 
@@ -166,19 +165,25 @@
 
       <footer class="composer-wrap" id="composerWrap">
         <form class="composer" id="chatForm">
-          <textarea
-            id="messageInput"
-            rows="1"
-            maxlength="6000"
-            placeholder="Tanyakan sesuatu kepada HaxorAI..."
-            aria-label="Pesan untuk HaxorAI Assistant"
-            required
-          ></textarea>
+<textarea
+  id="messageInput"
+  rows="1"
+  maxlength="6000"
+  placeholder="Tanyakan sesuatu kepada HaxorAI..."
+  aria-label="Pesan untuk HaxorAI Assistant"
+  enterkeyhint="enter"
+  required
+></textarea>
 
           <div class="composer-footer">
-            <span class="composer-hint">
-              Enter untuk mengirim · Shift + Enter untuk baris baru
-            </span>
+<span class="composer-hint">
+  <span class="desktop-hint">
+    Enter untuk mengirim · Shift + Enter untuk baris baru
+  </span>
+  <span class="mobile-hint">
+    Enter untuk baris baru · Tombol Kirim untuk mengirim
+  </span>
+</span>
 
             <button class="send-button" id="sendButton" type="submit">
               <span class="send-label">Kirim</span>
@@ -268,7 +273,6 @@
 </div>
 
   <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
-<!-- Application -->
-<script src="https://chat.haxorai.com/js/app.js" defer></script>
+<script defer src="https://chat.haxorai.com/js/app.js"></script>
 </body>
 </html>
